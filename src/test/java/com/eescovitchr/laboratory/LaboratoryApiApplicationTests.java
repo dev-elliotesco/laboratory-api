@@ -1,4 +1,4 @@
-package com.eescovitchr.laboratory_api;
+package com.eescovitchr.laboratory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
