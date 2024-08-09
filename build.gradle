@@ -41,7 +41,7 @@ tasks.named('test') {
 
 sonar {
 	properties {
-		property "sonar.projectKey", "dev-elliotesco_nombre-proyecto"
+		property "sonar.projectKey", "dev-elliotesco_laboratory-api"
 		property "sonar.organization", "dev-elliotesco"
 		property "sonar.host.url", "https://sonarcloud.io"
 	}
