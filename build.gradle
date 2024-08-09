@@ -3,6 +3,18 @@ plugins {
 	id 'org.springframework.boot' version '3.3.3-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.1.6'
 	id "org.sonarqube" version "4.4.1.3373"
+	id 'jacoco'
+}
+
+jacocoTestReport {
+	reports {
+		xml.required = true
+		html.required = true
+	}
+}
+
+test {
+	finalizedBy jacocoTestReport
 }
 
 group = 'com.eescovitchr'
@@ -45,5 +57,6 @@ sonar {
 		property "sonar.projectKey", "dev-elliotesco_laboratory-api"
 		property "sonar.organization", "dev-elliotesco"
 		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
 	}
 }
