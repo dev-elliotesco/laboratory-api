@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew build
   
       - name: Run tests with Gradle
-        run: ./gradlew test
+        run: ./gradlew clean test --no-build-cache
 
       - name: Generate Jacoco coverage report
         run: ./gradlew jacocoTestReport
